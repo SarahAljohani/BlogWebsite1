@@ -1,0 +1,13 @@
+{% extends 'master.html' %}
+
+{% block title %}Comments{% endblock %}
+
+{% block content %}
+  <h1>Comments</h1>
+  <ul>
+    {% for comment in comments %}
+      <li>{{ comment.content }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'main' %}">Back to Main Page</a>
+{% endblock %}

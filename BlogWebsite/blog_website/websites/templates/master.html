@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'main' %}">Home</a></li>
+        <li><a href="{% url 'users' %}">Users</a></li>
+        <li><a href="{% url 'categories' %}">Categories</a></li>
+        <li><a href="{% url 'blogs' %}">Blogs</a></li>
+        <li><a href="{% url 'comments' %}">Comments</a></li>
+      </ul>
+    </nav>
+  </header>
+  {% block content %}
+  {% endblock %}
+  <footer>
+    <p>&copy; 2024 Your Site</p>
+  </footer>
+</body>
+</html>
